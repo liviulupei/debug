@@ -12,13 +12,11 @@ jobs:
       - name: Functional test deployment
         id: endtest_functional_tests
         uses: endtest-technologies/github-run-tests-action@v1.7
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          app_id: <your-endtest-app-id>
-          app_code: <your-endtest-app-code>
-          api_request: <your-endtest-api-request-for-starting-a-test-execution>
-          number_of_loops: <the-number-of-times-the-API-request-for-fetching-the-results-will-be-sent-once-every-30-seconds>
+          app_id: "43394175"
+          app_code: "63141551"
+          api_request: "https://app.endtest.io/api.php?action=runWeb&appId=43394175&appCode=63141551&suite=1093764&platform=windows&os=windows10&browser=chrome&browserVersion=latest&resolution=1280x1024&geolocation=sanfrancisco&cases=all&notes="
+          number_of_loops: "1"
 
       - name: Use the outputs from test execution in a different step
         run: |
