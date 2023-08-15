@@ -13,10 +13,10 @@ jobs:
         id: endtest_functional_tests
         uses: endtest-technologies/github-run-tests-action@v1.8
         with:
-          app_id: 43394175
-          app_code: 63141551
+          app_id: "43394175"
+          app_code: "63141551"
           api_request: "https://app.endtest.io/api.php?action=runWeb&appId=43394175&appCode=63141551&suite=1095057&platform=windows&os=windows10&browser=chrome&browserVersion=latest&resolution=1280x1024&geolocation=sanfrancisco&cases=all&notes="
-          number_of_loops: 1
+          number_of_loops: "1"
 
       - name: Use the outputs from test execution in a different step
         run: |
